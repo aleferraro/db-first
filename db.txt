@@ -21,22 +21,22 @@ Colonne:
     "NOME COLONNA" -> "TIPO DI DATO"
 
 
-    auto_ID -> INT
+    auto_ID -> INT  primary_key(auto_increment, unique)
 
-    Marca -> VARCHAR(25)
-    Modello -> VARCHAR(25)
-    Condizione (nuovo/usato) -> VARCHAR(15)
-    Anno -> YEAR
-    KM -> MEDIUMINT
-    Alimentazione -> VARCHAR(25)
-    Cilindrata -> TINYINT
-    Potenza (kw/CV) -> VARCHAR(15)
-    Prezzo -> FLOAT(7,2)
-    Colore -> VARCHAR(25)
-    Porte -> TINYINT
-    Cambio (Manuale/Automatico) -> VARCHAR(15)
-    Lunghezza cm -> TINYINT
-    Larghezza cm -> TINYINT
-    Classe Emissioni -> VARCHAR(15)
-    Consumo Carburante -> VARCHAR(100)
-    Optional -> VARCHAR(255)
+    Marca -> VARCHAR(25)    notnull
+    Modello -> VARCHAR(25)  notnull
+    Condizione (nuovo/usato) -> VARCHAR(15) notnull
+    Anno -> YEAR    notnull
+    KM -> MEDIUMINT default(0)
+    Alimentazione -> VARCHAR(25)    notnull
+    Cilindrata -> TINYINT   notnull
+    Potenza (kw/CV) -> VARCHAR(15)  notnull
+    Prezzo -> FLOAT(7,2)    notnull
+    Colore -> VARCHAR(25)   null
+    Porte -> TINYINT    notnull
+    Cambio (Manuale/Automatico) -> VARCHAR(15)  default(manuale)
+    Lunghezza cm -> TINYINT     null
+    Larghezza cm -> TINYINT     null
+    Classe Emissioni -> VARCHAR(15)     notnull
+    Consumo Carburante -> VARCHAR(100)  null
+    Optional -> VARCHAR(255)    null
